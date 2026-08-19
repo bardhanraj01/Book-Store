@@ -1,10 +1,15 @@
 .box {
     display: flex;
-    gap: 30px;
+    gap: 500px;
     background-color: rgb(204, 87, 15);
-    width: 300px;
-    height: 100px;
+    height: 20px;
     border: 2px solid black;
-
-
+    border-right: 2px solid black;
+}
+.box2{
+    display: flex;
+    gap: 180px;
+    background-color: burlywood;
+    height: 18px;
+    border: 2px solid black; 
 }
