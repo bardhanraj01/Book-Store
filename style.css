@@ -1,15 +1,109 @@
-.box1 {
-    display: flex;
-    gap: 600px;
-    background-color: rgb(204, 87, 15);
-    height: 20px;
-    border: 2px solid black;
-    border-right: 2px solid black;
+
+h1{
+    text-align: center;
+}
+.box1{
+    border: 1px solid black;
+}
+.insidebox1{
+    background-color: rgb(211, 202, 239);
+    margin-left: 5px;
 }
 .box2{
+    border: 1px solid black;
+}
+.insidebox2{
+    background-color: rgb(211, 202, 239);
+    margin-left: 5px;
+}
+.box3{
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.logo
+{
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
-    gap: 200px;
-    background-color: burlywood;
-    height: 18px;
-    border: 2px solid black; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 202, 239);
+    border: 1px solid black;
+    height: 30px;
+}
+.name
+{
+    grid-column: 2/6;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 202, 239);
+    border: 1px solid black;
+    height: 30px;
+}
+.home{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 25px;
+}
+.login{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 25px;
+}
+.registration{
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 25px;
+}
+.catalogue{
+    grid-column: 4;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 25px;
+}
+.cart{
+    display: flex;
+    grid-column: 5;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 25px;
+}
+.Description{
+    grid-column: 2/6;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-left: 1px solid black;
+}
+.branches{
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }
