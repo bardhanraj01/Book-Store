@@ -107,3 +107,9 @@ h1{
     align-items: center;
     border: 1px solid black;
 }
+.logo img{
+    border-radius: 50%;
+}
+.logo div{
+    margin-left: 10px;
+}

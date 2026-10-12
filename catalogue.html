@@ -1,0 +1,46 @@
+
+<button onclick="showCatalogue()">Catalogue</button>
+
+<div id="catalogue" class="catalogue">
+  
+  <div class="book">
+    <div class="book-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSflgwIxd_ECcyQ0Mq8xrQD6xyGLUoPxKSKrUFIBeCAmQ&s=10" alt="XML Bible">
+    </div>
+    <div class="description">
+      <p>Book: XML Bible</p>
+      <p>Author: Winston</p>
+      <p>Publication: Wiley</p>
+    </div>
+    <div class="price">$40.5</div>
+
+    <div class="cart">
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="book">
+    <div class="book-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-GrHhvEwp31msqOyssGJUuAfpu1L7tQz6jlILoNxOhA&s=10" alt="Artificial Intelligence">
+    </div>
+
+    <div class="description">
+      <p>Book: AI</p>
+      <p>Author: S. Russell</p>
+      <p>Publication: Prentice Hall</p>
+    </div>
+
+    <div class="price">$63</div>
+
+    <div class="cart">
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function showCatalogue() {
+    document.getElementById("catalogue").style.display = "block";
+  }
+</script>

@@ -26,14 +26,45 @@
                 <div class="logo"><img width="20" height="20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmQ0HjjuNHpmiGlpEIA-vO7WBwmOT5Hid-2PUTg-7TjA&s=10" alt="G.L. BAJAJ" class="image",">G.L. BAJAJ</div>
                 <div class="name">Website Name</div>
                 <div class="home"><a href="index.html">Home</a></div>
-                <div class="login"><a href="login.html">Login</a></div>
-                <div class="registration"> <a href="registration.html">Registration</a></div>
-                <div class="catalogue"><a href="catalogue.html">Catalogue</a></div>
-                <div class="cart"><a href="cart.html">Cart</a></div>
-                <div class="branches">CSE<br>ECE<br>EEE<br>CIVIL </div>
-                <div class="Description">Description of the website</div>
+                <div class="login">
+                    <a href="login.html" target="contentFrame">Login</a>
+                </div>
+                <div class="registration">
+                     <a href="registration.html" target="contentFrame">Registration</a>
+                </div>
+                <div class="catalogue">
+                    <a href="catalogue.html" target="contentFrame">Catalogue</a>
+                </div>
+                <div class="cart">
+                    <a href="cart.html" target="contentFrame">Cart</a>
+                </div>
+                <div class="branches">
+                    CSE<br>ECE<br>EEE<br>CIVIL 
+                </div>
+                <div class="Description">
+                    <iframe id="contentFrame" name="contentFrame" src="description.html" width="100%" height="100" style="border: none;">
+                    </iframe>
+                </div>
     </div>
-    
+    <script>
+const frame = document.getElementById("contentFrame");
+
+frame.addEventListener("load", function () {
+    const doc = frame.contentDocument;
+
+    if (doc) {
+        const height = Math.max(
+            doc.body.scrollHeight,
+            doc.documentElement.scrollHeight
+        );
+
+        frame.style.height = height + "px";
+        console.log("Iframe height:", height);
+    }
+});
+</script>
+</body>
+</html>
 
 </body>
 </html>

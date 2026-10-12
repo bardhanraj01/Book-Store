@@ -1,0 +1,61 @@
+
+.catalogue {
+    display: none;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.book
+{
+    display: flex;
+    display: grid;
+    grid-template-columns: 20% 40% 15% 25%;
+    min-height: 250px;
+    border-bottom: 1px solid black;
+}
+
+.book-image,
+.description,
+.price,
+.cart {
+    padding: 15px;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.book-image img {
+    width: 100%;
+    max-width: 180px;
+    height: 100px;
+}
+.description p {
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart button {
+    background-color: #f5c342;
+    border: 1px solid #b38b20;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.book,
+.description{
+    display: flex;
+}
