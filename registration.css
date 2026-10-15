@@ -8,7 +8,8 @@ h2{
 .row5,
 .row6,
 .row7,
-.row8{
+.row8,
+.row9{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,11 +48,17 @@ form{
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-button{
+.row7 button{
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 10px 0 10px;
+}
+.row9 button{
+    padding: 10px 20px;;
     border-radius: 5px;
     cursor: pointer;
     margin: 0px 10px 0 10px;

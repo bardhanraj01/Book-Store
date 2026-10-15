@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSE</title>
+    <link rel="stylesheet" href="cse.css">
+</head>
+<body>
+    <div class="Book1">
+        <div class="bookimage">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgUEw9c7BwtkariwwNSd-_Domo4NURl32MtIX3ys3CeA&s=10" height="150 alt="CSE Books">
+        </div>
+        <div class="information1">
+            <div class="book">
+                <h3>Data Structures and Algorithms</h3>
+                <p>Price: ₹499</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="bookimage">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUroPtJPSYukSmqiyd4gO_ujaSZ3fkzE7ZGtl5gJq-g&s=10" height="150 alt="CSE Books">
+    </div>
+
+<div class="book">
+    <h3>HTML & CSS Book</h3>
+    <p>Price: ₹299</p>
+
+    <button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<p>Cart Items: <span id="cart-count">0</span></p>
+
+    <script>
+    let cartCount = 0;
+
+    function addToCart() {
+        cartCount++;
+
+        document.getElementById("cart-count").innerHTML = cartCount;
+
+        alert("Book added to cart!");
+    }
+</script>
+</body>
+</html>

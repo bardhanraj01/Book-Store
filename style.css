@@ -33,6 +33,10 @@ h1{
     border: 1px solid black;
     height: 30px;
 }
+.logo a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .name
 {
     grid-column: 2/6;
@@ -44,6 +48,10 @@ h1{
     border: 1px solid black;
     height: 30px;
 }
+.name a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .home{
     grid-column: 1;
     grid-row: 2;
@@ -52,6 +60,10 @@ h1{
     align-items: center;
     border: 1px solid black;
     height: 25px;
+}
+.home a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 .login{
     grid-column: 2;
@@ -62,6 +74,10 @@ h1{
     border: 1px solid black;
     height: 25px;
 }
+.login a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .registration{
     grid-column: 3;
     grid-row: 2;
@@ -71,6 +87,10 @@ h1{
     border: 1px solid black;
     height: 25px;
 }
+.registration a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .catalogue{
     grid-column: 4;
     grid-row: 2;
@@ -79,6 +99,10 @@ h1{
     align-items: center;
     border: 1px solid black;
     height: 25px;
+}
+.catalogue a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 .cart{
     display: flex;
@@ -90,7 +114,13 @@ h1{
     border: 1px solid black;
     height: 25px;
 }
+.cart a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .Description{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
     grid-column: 2/6;
     grid-row: 3;
     display: flex;
@@ -99,13 +129,40 @@ h1{
     border: 1px solid black;
     border-left: 1px solid black;
 }
+.Description a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .branches{
     grid-column: 1;
     grid-row: 3;
-    display: flex;
+
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+}
+.branches button{
+    /* display: block; */
+    width: 90%;
+    padding: 10px 120px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+}
+.branches button:hover {
+    background-color: rgb(211, 202, 239);
+    color: rgb(0, 0, 0);
+}
+.branches a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .logo img{
     border-radius: 50%;

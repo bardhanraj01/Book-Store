@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bookimage{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+}
+.book1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bookimage{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 202, 239);
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+}
+button:hover {
+    background-color: rgb(211, 202, 239);
+    color: rgb(0, 0, 0);
+}
