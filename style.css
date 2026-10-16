@@ -136,13 +136,14 @@ h1{
 .branches{
     grid-column: 1;
     grid-row: 3;
-
+    border-bottom: none;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
 }
 .branches button{
-    /* display: block; */
+    white-space: nowrap;
+    display: block;
     width: 90%;
     padding: 10px 120px;
     margin: 10px;
