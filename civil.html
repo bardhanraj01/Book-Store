@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Engineering Books - Bookstore</title>
+    <link rel="stylesheet" href="civil.css">
+</head>
+
+<body>
+
+    <h1>Civil Engineering Books</h1>
+
+    <div class="all-books">
+
+        <!-- Book 1 -->
+        <div class="Book1">
+            <div class="bookimage1">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWQRzcPAkL9erWOcI7q6EITCjeorpSaVX_qaCMp2Wicw&s=10"
+                    height="150"
+                    alt="Surveying"
+                >
+
+                <div class="information1">
+                    <h3>Surveying</h3>
+                    <p>Price: ₹399</p>
+
+                    <button onclick="addToCart('Surveying', 399)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="Book2">
+            <div class="bookimage2">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-VQpR2RcPERtOPR3hVKbwfcszdYLfkYyLITakGIY1xg&s=10"
+                    height="150"
+                    alt="Strength of Materials"
+                >
+
+                <div class="information2">
+                    <h3>Strength of Materials</h3>
+                    <p>Price: ₹450</p>
+
+                    <button onclick="addToCart('Strength of Materials', 450)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="Book3">
+            <div class="bookimage3">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz-YyEH1LQEdsKZe5zt1EFbLsVDirbWcgOLa3XTyjXRA&s=10"
+                    height="150"
+                    alt="Building Materials"
+                >
+
+                <div class="information3">
+                    <h3>Building Materials</h3>
+                    <p>Price: ₹349</p>
+
+                    <button onclick="addToCart('Building Materials', 349)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="Book4">
+            <div class="bookimage4">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO2t87y8CWs7VhDo8Sbn2bgBBbAVZ-mia3gf9tk9K20g&s=10"
+                    height="150"
+                    alt="Environmental Engineering"
+                >
+
+                <div class="information4">
+                    <h3>Environmental Engineering</h3>
+                    <p>Price: ₹499</p>
+
+                    <button onclick="addToCart('Environmental Engineering', 499)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- View Cart Button -->
+    <div class="cart-section">
+        <button class="cart" onclick="window.location.href='cart.html'">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                name: name,
+                price: price
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            updateCartCount();
+
+            alert(name + " added to cart!");
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            document.getElementById("cart-count").textContent = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+</body>
+</html>

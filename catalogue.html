@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalogue</title>
+    <link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+
+    <h1>Book Catalogue</h1>
+
+    <button class="cart-button" onclick="window.location.href='cart.html'">
+        View Cart (<span id="cartCount">0</span>)
+    </button>
+
+    <div class="catalogue">
+
+        <h2>CSE Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Data Structures and Algorithms</h3>
+                <p>Price: ₹499</p>
+                <button onclick="addToCart('Data Structures and Algorithms', 499)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>HTML &amp; CSS Book</h3>
+                <p>Price: ₹299</p>
+                <button onclick="addToCart('HTML & CSS Book', 299)">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>ECE Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Electronic Devices and Circuits</h3>
+                <p>Price: ₹450</p>
+                <button onclick="addToCart('Electronic Devices and Circuits', 450)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Signals and Systems</h3>
+                <p>Price: ₹399</p>
+                <button onclick="addToCart('Signals and Systems', 399)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Digital Electronics</h3>
+                <p>Price: ₹350</p>
+                <button onclick="addToCart('Digital Electronics', 350)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Communication Systems</h3>
+                <p>Price: ₹499</p>
+                <button onclick="addToCart('Communication Systems', 499)">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>EEE Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Basic Electrical Engineering</h3>
+                <p>Price: ₹399</p>
+                <button onclick="addToCart('Basic Electrical Engineering', 399)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Electrical Machines</h3>
+                <p>Price: ₹499</p>
+                <button onclick="addToCart('Electrical Machines', 499)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Power Electronics</h3>
+                <p>Price: ₹450</p>
+                <button onclick="addToCart('Power Electronics', 450)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Electrical Circuit Analysis</h3>
+                <p>Price: ₹349</p>
+                <button onclick="addToCart('Electrical Circuit Analysis', 349)">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Civil Engineering Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Surveying</h3>
+                <p>Price: ₹399</p>
+                <button onclick="addToCart('Surveying', 399)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Strength of Materials</h3>
+                <p>Price: ₹450</p>
+                <button onclick="addToCart('Strength of Materials', 450)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Building Materials</h3>
+                <p>Price: ₹349</p>
+                <button onclick="addToCart('Building Materials', 349)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <h3>Environmental Engineering</h3>
+                <p>Price: ₹499</p>
+                <button onclick="addToCart('Environmental Engineering', 499)">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name: name, price: price });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCartCount();
+            alert(name + " added to cart!");
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cartCount").textContent = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEE Books - Bookstore</title>
+    <link rel="stylesheet" href="eee.css">
+</head>
+
+<body>
+
+    <h1>EEE Books</h1>
+
+    <div class="all-books">
+
+        <!-- Book 1 -->
+        <div class="Book1">
+            <div class="bookimage1">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lx-C-UPL_XAwRWJXlce0-bVpi6nEAIl9s6Tagpr67g&s=10"
+                    height="150"
+                    alt="Basic Electrical Engineering"
+                >
+
+                <div class="information1">
+                    <h3>Basic Electrical Engineering</h3>
+                    <p>Price: ₹399</p>
+
+                    <button onclick="addToCart('Basic Electrical Engineering', 399)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="Book2">
+            <div class="bookimage2">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPY-7rR9B5sCG5PvcHcHQwZOLzVRFqxQqIJ83qcFvJqQ&s=10"
+                    height="150"
+                    alt="Electrical Machines"
+                >
+
+                <div class="information2">
+                    <h3>Electrical Machines</h3>
+                    <p>Price: ₹499</p>
+
+                    <button onclick="addToCart('Electrical Machines', 499)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="Book3">
+            <div class="bookimage3">
+                <img
+                    src="https://covers.openlibrary.org/b/isbn/9780130617934-M.jpg"
+                    height="150"
+                    alt="Power Electronics"
+                >
+
+                <div class="information3">
+                    <h3>Power Electronics</h3>
+                    <p>Price: ₹450</p>
+
+                    <button onclick="addToCart('Power Electronics', 450)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="Book4">
+            <div class="bookimage4">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBblrl7pmc018Xj2dfH0_HqsYyKK2_1Er4z8CzYnhbrw&s=10"
+                    height="150"
+                    alt="Electrical Circuit Analysis"
+                >
+
+                <div class="information4">
+                    <h3>Electrical Circuit Analysis</h3>
+                    <p>Price: ₹349</p>
+
+                    <button onclick="addToCart('Electrical Circuit Analysis', 349)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- View Cart Button -->
+    <div class="cart-section">
+        <button class="cart" onclick="window.location.href='cart.html'">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                name: name,
+                price: price
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            updateCartCount();
+
+            alert(name + " added to cart!");
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            document.getElementById("cart-count").textContent = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+</body>
+</html>

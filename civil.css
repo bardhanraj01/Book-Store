@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.all-books {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.Book1,
+.Book2,
+.Book3,
+.Book4 {
+    width: 260px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.bookimage1,
+.bookimage2,
+.bookimage3,
+.bookimage4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.bookimage1 img,
+.bookimage2 img,
+.bookimage3 img,
+.bookimage4 img {
+    width: 120px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.information1,
+.information2,
+.information3,
+.information4 {
+    width: 100%;
+}
+
+.information1 button,
+.information2 button,
+.information3 button,
+.information4 button,
+.cart {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-section {
+    margin-top: 25px;
+}
+
+.cart {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.cart:hover {
+    background-color: #5148d8;
+}
