@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cart - Bookstore</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <h1>My Shopping Cart</h1>
+
+    <div id="cart-container"></div>
+
+    <h3 id="total">Total: ₹0</h3>
+
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="history.back()">Continue Shopping</button>
+
+    <script>
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let container = document.getElementById("cart-container");
+            let total = 0;
+
+            container.innerHTML = "";
+
+            if (cart.length === 0) {
+                container.innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                cart.forEach((book, index) => {
+                    total += book.price;
+
+                    let item = document.createElement("div");
+                    item.className = "cart-item";
+
+                    let name = document.createElement("h3");
+                    name.textContent = book.name;
+
+                    let price = document.createElement("p");
+                    price.textContent = "Price: ₹" + book.price;
+
+                    let remove = document.createElement("button");
+                    remove.textContent = "Remove";
+                    remove.onclick = function () {
+                        cart.splice(index, 1);
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        displayCart();
+                    };
+
+                    item.append(name, price, remove);
+                    container.appendChild(item);
+                });
+            }
+
+            document.getElementById("total").textContent =
+                "Total: ₹" + total;
+        }
+
+        function clearCart() {
+            localStorage.removeItem("cart");
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+
+</body>
+</html>

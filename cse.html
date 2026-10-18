@@ -1,54 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Books - Bookstore</title>
     <link rel="stylesheet" href="cse.css">
 </head>
+
 <body>
-    <div class="Book1">
-        <div class="bookimage1">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgUEw9c7BwtkariwwNSd-_Domo4NURl32MtIX3ys3CeA&s=10" height="150" alt="CSE Books">
-            <div class="information1">
+
+    <h1>CSE Books</h1>
+    <div class="all-books">
+        <div class="Book1">
+            <div class="bookimage1">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgUEw9c7BwtkariwwNSd-_Domo4NURl32MtIX3ys3CeA&s=10"
+                    height="150"
+                    alt="Data Structures and Algorithms Book"
+                >
+
+                <div class="information1">
                     <h3>Data Structures and Algorithms</h3>
                     <p>Price: ₹499</p>
-                    <button onclick="addToCart()">Add to Cart</button>
+
+                    <button onclick="addToCart('Data Structures and Algorithms', 499)">
+                        Add to Cart
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="Book2">
-        <div class="bookimage2">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUroPtJPSYukSmqiyd4gO_ujaSZ3fkzE7ZGtl5gJq-g&s=10" height="150" alt="CSE Books">
-            <div class="information2">
-                <h3>HTML & CSS Book</h3>
-                <p>Price: ₹299</p>
-                <button onclick="addToCart()">Add to Cart</button>
+        <div class="Book2">
+            <div class="bookimage2">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUroPtJPSYukSmqiyd4gO_ujaSZ3fkzE7ZGtl5gJq-g&s=10"
+                    height="150"
+                    alt="HTML and CSS Book"
+                >
+
+                <div class="information2">
+                    <h3>HTML &amp; CSS Book</h3>
+                    <p>Price: ₹299</p>
+
+                    <button onclick="addToCart('HTML & CSS Book', 299)">
+                        Add to Cart
+                    </button>
+                </div>
             </div>
         </div>
+
     </div>
-    </body>  
-<button  class="cart" onclick="window.location.href='cart.html'">View Cart: </button><span id="cart-count">0</span></button>
+
+    <!-- View Cart Button -->
+    <div class="cart-section">
+        <button class="cart" onclick="window.location.href='cart.html'">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
 
     <script>
-    let cartCount = 0;
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    function addToCart() {
-        cartCount++;
+            cart.push({
+                name: name,
+                price: price
+            });
 
-        document.getElementById("cart-count").innerHTML = cartCount;
+            localStorage.setItem("cart", JSON.stringify(cart));
 
-        alert("Book added to cart!");
-    }
-    </script>
-    <script>
-    function showCart() {
-        let cart = document.getElementById("cartDetails");
+            updateCartCount();
 
-        if (cart.style.display === "none") {
-            cart.style.display = "block";
-        } else {
-            cart.style.display = "none";
+            alert(name + " added to cart!");
         }
-    }
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            document.getElementById("cart-count").textContent = cart.length;
+        }
+        updateCartCount();
     </script>
+
 </body>
 </html>

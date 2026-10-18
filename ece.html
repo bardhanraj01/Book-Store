@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Books - Bookstore</title>
+    <link rel="stylesheet" href="ece.css">
+</head>
+
+<body>
+
+    <h1>ECE Books</h1>
+
+    <div class="all-books">
+
+        <!-- Book 1 -->
+        <div class="Book1">
+            <div class="bookimage1">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKsd5nwkJfCDxTRSUPEQ4ZY5hJ9YG6ovRiAkQW1u55LQ&s=10"
+                    height="150"
+                    alt="Electronic Devices and Circuits"
+                >
+
+                <div class="information1">
+                    <h3>Electronic Devices and Circuits</h3>
+                    <p>Price: ₹450</p>
+
+                    <button onclick="addToCart('Electronic Devices and Circuits', 450)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="Book2">
+            <div class="bookimage2">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtmgFFvHg_GUhi8XFUMfcRKmLddlUsP19hc0B1E8RXNg&s=10"
+                    height="150"
+                    alt="Signals and Systems"
+                >
+
+                <div class="information2">
+                    <h3>Signals and Systems</h3>
+                    <p>Price: ₹399</p>
+
+                    <button onclick="addToCart('Signals and Systems', 399)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="Book3">
+            <div class="bookimage3">
+                <img
+                    src="https://covers.openlibrary.org/b/isbn/9780130617934-M.jpg"
+                    height="150"
+                    alt="Digital Electronics"
+                >
+
+                <div class="information3">
+                    <h3>Digital Electronics</h3>
+                    <p>Price: ₹350</p>
+
+                    <button onclick="addToCart('Digital Electronics', 350)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="Book4">
+            <div class="bookimage4">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhlYHQgKTEwfsUtaTkEuNkVw2H-_AHceKJCqjvW-QGOw&s=10"
+                    height="150"
+                    alt="Communication Systems"
+                >
+
+                <div class="information4">
+                    <h3>Communication Systems</h3>
+                    <p>Price: ₹499</p>
+
+                    <button onclick="addToCart('Communication Systems', 499)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- View Cart Button -->
+    <div class="cart-section">
+        <button class="cart" onclick="window.location.href='cart.html'">
+            🛒 View Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                name: name,
+                price: price
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            updateCartCount();
+
+            alert(name + " added to cart!");
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            document.getElementById("cart-count").textContent = cart.length;
+        }
+
+        updateCartCount();
+    </script>
+
+</body>
+</html>
