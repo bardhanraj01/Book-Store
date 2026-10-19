@@ -1,25 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>login page</title>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js" defer></script>
 </head>
 <body>
-    <h2>Login page</h2>
-    <div class="row1">
-        <label>User name:</label>
-        <input type="text">
-    </div>
+
+    <h2>Login Page</h2>
+
+    <form id="loginForm">
+        <div class="row1">
+            <label for="username">User name:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
         <br>
-    <div class="row2">
-        <label>Password:</label>
-        <input type="password">
-    </div>
+
+        <div class="row2">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
         <br>
-    <div class="buttons">
-        <button type="submit">submit</button>
-        <button type="reset">reset</button>
-    </div>
+
+        <div class="buttons">
+            <button type="submit">Login</button>
+            <button type="reset">Reset</button>
+        </div>
+
+        <p id="message"></p>
+
+        <p>Don't have an account?
+            <a href="registration.html">Register here</a>
+        </p>
+    </form>
+
 </body>
 </html>

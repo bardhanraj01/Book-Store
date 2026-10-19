@@ -1,49 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Registration page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
     <link rel="stylesheet" href="registration.css">
-    <script src="../js/registeration.js"></script>
+    <script src="../js/registration.js" defer></script>
 </head>
 <body>
+
     <h2>Registration Page</h2>
-    <div class="row1">
-        <label>Name:</label>
-        <input type="text">
-    </div>
-    <div class="row2">
-        <label>Password:</label>
-        <input type="text">
-    </div>
-    <div class="row3">
-        <label>E-mail Id:</label>
-        <input type="text">
-    </div>
-    <div class="row4">
-        <label>Phone Number:</label>
-        <input type="number">
-    </div>
-    <div class="row5">
-        <label>Sex:</label>
-        <input type="text">
-    </div>
-    <div class="row6">
-        <label>Date of Birth:</label>
-        <input type="date">
-    </div>
-    <div class="row8">
-        <label>Address:</label>
-        <input type="text">
-    </div>
-    <div class="row7">
-        <label>Languages known:</label>
-        <button type="submit">English</button>
-        <button type="submit">Telugu</button>
-        <button type="submit">Hindi</button>
-        <button type="submit">Tamil</button>
-    </div>
-    <div class="row9">
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+
+    <form id="registrationForm">
+
+        <div class="row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+        </div>
+
+        <div class="row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password" minlength="8" required>
+        </div>
+
+        <div class="row">
+            <label for="email">E-mail ID:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+        </div>
+
+        <div class="row">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="10-digit mobile number"
+                   pattern="[0-9]{10}" maxlength="10" required>
+        </div>
+
+        <div class="row">
+            <label>Sex:</label>
+            <label class="option">
+                <input type="radio" name="sex" value="Male" required> Male
+            </label>
+            <label class="option">
+                <input type="radio" name="sex" value="Female"> Female
+            </label>
+            <label class="option">
+                <input type="radio" name="sex" value="Other"> Other
+            </label>
+        </div>
+
+        <div class="row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="row">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      placeholder="Enter your address" required></textarea>
+        </div>
+
+        <div class="row">
+            <label>Languages known:</label>
+            <label class="option">
+                <input type="checkbox" name="languages" value="English"> English
+            </label>
+            <label class="option">
+                <input type="checkbox" name="languages" value="Telugu"> Telugu
+            </label>
+            <label class="option">
+                <input type="checkbox" name="languages" value="Hindi"> Hindi
+            </label>
+            <label class="option">
+                <input type="checkbox" name="languages" value="Tamil"> Tamil
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+        </div>
+
+        <p id="message" role="status"></p>
+
+    </form>
+
 </body>
 </html>

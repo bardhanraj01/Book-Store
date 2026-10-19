@@ -68,10 +68,9 @@ h1 {
 }
 
 .cart {
-    background-color: #6c63ff;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .cart:hover {
-    background-color: #5148d8;
+    background-color: rgb(211, 202, 239);
 }

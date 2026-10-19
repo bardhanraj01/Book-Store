@@ -1,32 +1,101 @@
-.row1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 30px;
 }
-.row2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.buttons button{
-    padding: 10px 20px;
-    margin: 10px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    display: flex;
-    border-radius: 10px;
-    border: none;
-}
-.buttons button:hover{
-    background-color: rgb(211, 202, 239);
-    color: rgb(0, 0, 0);
-}
-h2{
+
+/* Login heading */
+h2 {
     text-align: center;
+    color: #1c4e80;
+    margin-top: 30px;
+}
+
+/* Login form rows */
+.row1,
+.row2 {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 400px;
+    gap: 15px;
+}
+
+.row1 label,
+.row2 label {
+    width: 110px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields */
+.row1 input,
+.row2 input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.row1 input:focus,
+.row2 input:focus {
+    border-color: #1c4e80;
+    box-shadow: 0 0 5px #a8c8e8;
+}
+
+/* Buttons */
+.buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.buttons button {
+    padding: 10px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c4e80;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.buttons button:hover {
+    background-color: #14385c;
+}
+
+/* Reset button */
+.buttons button[type="reset"] {
+    background-color: #777;
+}
+
+.buttons button[type="reset"]:hover {
+    background-color: #555;
+}
+
+/* Register link */
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+p a {
+    color: #1c4e80;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Login message */
+#message {
+    font-weight: bold;
 }

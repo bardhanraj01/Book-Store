@@ -1,65 +1,88 @@
-h2{
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 25px;
+}
+
+h2 {
     text-align: center;
+    color: #1c4e80;
 }
-.row1,
-.row2,
-.row3,
-.row4,
-.row5,
-.row6,
-.row7,
-.row8,
-.row9{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.row1 label,
-.row2 label,
-.row3 label,
-.row4 label,
-.row5 label,
-.row6 label,
-.row7 label,
-.row8 label{
-    width: 130px;
-    text-align: right;
-    margin-right: 10px;
-}
-input{
-    width: 200px;
-    padding: 7px;
-    border: 1px solid #999;
-    border-radius: 5px;
-}
-input:focus{
-    outline: none;
-    border-color: #666;
-}
-body{
-    background-color: #f2f2f2;
-}
-form{
-    width: 450px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px #ccc;
 }
-.row7 button{
-    padding: 10px 20px;
-    background-color: #4CAF50;
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.row > label:first-child {
+    width: 140px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    flex: 1;
+    min-width: 150px;
+    padding: 9px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+.option {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 22px;
+    margin: 5px;
+    background-color: #1c4e80;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0px 10px 0 10px;
 }
-.row9 button{
-    padding: 10px 20px;;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0px 10px 0 10px;
+
+button:hover {
+    background-color: #14385c;
+}
+
+button.reset {
+    background-color: #777;
+}
+
+#message {
+    text-align: center;
+    color: green;
+    font-weight: bold;
 }
